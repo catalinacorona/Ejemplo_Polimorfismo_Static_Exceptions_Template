@@ -1,7 +1,7 @@
 #include "Figura.h"
-
-Figura::Figura(uint cantLados_) : cantLados(cantLados_) {
+template<typename T>
+Figura <T> ::Figura(unsigned int cantLados_) : cantLados(cantLados_) {
 }
-
-Figura::~Figura() {
+template<typename T>
+Figura<T> ::~Figura() {
 }

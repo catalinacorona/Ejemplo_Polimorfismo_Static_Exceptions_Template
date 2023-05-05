@@ -40,5 +40,8 @@ float Calculadora::multiplicar(float valor1, float valor2) {
 
 
 float Calculadora::dividir(float valor1, float valor2) {
-    return ( valor1 / valor2 );
+
+    if (valor2 == 0)
+        throw "NO SE PUEDE DIVIDIR POR 0";
+    else return ( valor1 / valor2 );
 }

@@ -2,6 +2,7 @@
 #include <array>
 
 #include "Figura.h"
+using namespace std;
 
 /*
 * Ayuda para el Triiangulo
@@ -10,11 +11,11 @@
 * Solo se clasifica según sus lados
 */
 
-class Triangulo : public Figura {
-    std::array<float, 3> angulos;
-    std::array<float, 3> longLados;
+template<typename T> class Triangulo : public Figura<T> {
+    array<float, 3> angulos;
+    array<float, 3> longLados;
 public:
-    Triangulo(std::array<float, 3> angulos_, std::array<float, 3> longLados_);
+    Triangulo(array<float, 3> angulos_,array<float, 3> longLados_);
     ~Triangulo();
     float area();
     float perimetro();

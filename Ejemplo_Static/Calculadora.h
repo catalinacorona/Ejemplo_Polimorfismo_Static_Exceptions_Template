@@ -3,15 +3,16 @@
 #include <string>
 #include <sstream>
 #include <iostream>
+using namespace std;
 
 class Calculadora
 {
-	const std::string nombre;
-	const std::string modelo;
+	const string nombre;
+	const string modelo;
 public:
-	Calculadora(std::string nombre_, std::string modelo_);
+	Calculadora(string nombre_, std::string modelo_);
 	~Calculadora();
-	std::string to_string();
+	string to_string();
 	void imprimir();
 	static float sumar(std::stack<float> valores);
 	static float restar(float valor1, float valor2);

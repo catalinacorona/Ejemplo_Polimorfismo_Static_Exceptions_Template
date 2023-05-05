@@ -1,26 +1,31 @@
 #include "Cuadrado.h"
-
-Cuadrado::Cuadrado(float longLado_) : Figura(4) {
+template<typename T>
+Cuadrado<T>::Cuadrado(T longLado_) : Figura(4) {
     this->longLado = longLado_;
 }
 
-Cuadrado::~Cuadrado() {
+template<typename T>
+Cuadrado<T>::~Cuadrado() {
 }
 
-float Cuadrado::area() {
+template<typename T>
+float Cuadrado<T>::area() {
     return (float)(floor(pow(this->longLado, 2) * 100.0) / 100.0);
 }
 
-float Cuadrado::perimetro() {
+template<typename T>
+float Cuadrado<T>::perimetro() {
     return (float)(floor(this->cantLados * this->longLado * 100.0) / 100.0);
 }
 
-std::string Cuadrado::to_string() {
+template<typename T>
+std::string Cuadrado<T>::to_string() {
     std::stringstream salida;
     salida << "Cuadrado de lado con longitud: " << this->longLado << std::endl << "Perimetro: " << this->perimetro() << std::endl << "Area: " << this->area() << std::endl;
     return salida.str();
 }
 
-void Cuadrado::imprimir() {
+template<typename T>
+void Cuadrado<T>::imprimir() {
     std::cout << this->to_string() << std::endl;
 }

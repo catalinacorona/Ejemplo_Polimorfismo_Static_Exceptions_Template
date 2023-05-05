@@ -15,3 +15,4 @@ template<typename T>
 inline void Propiedad<T>::set(T valor) {
 	this->variable = valor;
 }
+
